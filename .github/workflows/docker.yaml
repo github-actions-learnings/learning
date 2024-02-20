@@ -28,7 +28,6 @@ jobs:
             - name: COntainer in a step
               uses: docker://node:18.16-alpine3.17
               with:
-                entrypoint: '/Program Files/nodejs/node.exe:'
                 args: -p 2+3
             - name: Log Node Version
               uses: docker://node:18.16-alpine3.17
