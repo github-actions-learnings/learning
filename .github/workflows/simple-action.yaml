@@ -6,9 +6,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
+            - name: Displayworking Directory and List files
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
             - name: Simple Docker action
               id: greet
-              uses: /.github/Actions/hello-docker
+              uses: ./.github/Actions/hello-docker
               with: 
                 who-to-greet: Aaron
             - name: Log Greeting Time
