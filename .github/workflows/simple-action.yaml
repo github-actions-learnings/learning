@@ -15,13 +15,28 @@ jobs:
                 echo $GITHUB_WORKSPACE
             - name: VIewing .github dir
               working-directory: /home/runner/work/learning/learning/.github/
-              run: pwd
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
             - name: viewing actions dir
               working-directory: /home/runner/work/learning/learning/.github/Actions
-              run: pwd
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
             - name: View hello-docker dir
               working-directory: /home/runner/work/learning/learning/.github/Actions/hello-docker
-              run: pwd
+              run: |
+                pwd
+                ls -a
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
             - name: Simple Docker action
               id: greet
               uses: ./.github/Actions/hello-docker
