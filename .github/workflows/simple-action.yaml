@@ -13,6 +13,15 @@ jobs:
                 echo $GITHUB_SHA
                 echo $GITHUB_REPOSITORY
                 echo $GITHUB_WORKSPACE
+            - name: VIewing .github dir
+              working-directory: /home/runner/work/learning/learning/.github/
+              run: pwd
+            - name: viewing actions dir
+              working-directory: /home/runner/work/learning/learning/.github/Actions
+              run: pwd
+            - name: View hello-docker dir
+              working-directory: /home/runner/work/learning/learning/.github/Actions/hello-docker
+              run: pwd
             - name: Simple Docker action
               id: greet
               uses: ./.github/Actions/hello-docker
